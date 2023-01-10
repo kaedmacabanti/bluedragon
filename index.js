@@ -10,10 +10,10 @@ app.use(express.json())
 
 app.use(cors())
  
-app.use("/all_product", products);
+app.use("/allproducts", products);
 // connection
 const port = process.env.PORT || 9001;
-app.listen(port, () => console.log(`Listening to port ${port}`));
+app.listen(port, () => console.log(`Listening to port localhost:${port}`));
 
 
 
