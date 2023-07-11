@@ -1,48 +1,29 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 
-const productsSchema = new schema({
+const uaPublicInformationSchema = new schema({
   id:{
     type: Number,
     required: true
   },
-  category:{
-    type: String,
+  aboutUa:{
+    type: mongoose.Schema.Types.Mixed,
     required: true
   }, 
-  license:{
-    type: String,
+  admissions:{
+    type: mongoose.Schema.Types.Mixed,
     required: true
   }, 
-  product_name:{
-    type: String,
-    required: true
-  },
-  product_no:{
-    type: Number,
-    required: true
-  },  
-  product_description: {
-    type: String,
-    required: true
-  }
-  ,price:{
-    type: Number,
-    required: true
-  },
-   picture1:{
-    type: String,
-    required: true
-  }, 
-  picture2:{
-    type: String,
+  academics:{
+    type: mongoose.Schema.Types.Mixed,
     required: true
   },
 });
 
-const Product = mongoose.model('Products',productsSchema);
-module.exports = Product;
+const UaPublicInformation = mongoose.model('ua_public_information',uaPublicInformationSchema);
+module.exports = UaPublicInformation;
 
+ 
 
 
 
